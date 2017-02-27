@@ -1,0 +1,695 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2AE2EA7F1E640BC900F459A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2EA7E1E640BC900F459A9 /* main.m */; };
+		2AE2EA821E640BC900F459A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2EA811E640BC900F459A9 /* AppDelegate.m */; };
+		2AE2EA851E640BC900F459A9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2EA841E640BC900F459A9 /* ViewController.m */; };
+		2AE2EA881E640BC900F459A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AE2EA861E640BC900F459A9 /* Main.storyboard */; };
+		2AE2EA8A1E640BCA00F459A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AE2EA891E640BCA00F459A9 /* Assets.xcassets */; };
+		2AE2EA8D1E640BCA00F459A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AE2EA8B1E640BCA00F459A9 /* LaunchScreen.storyboard */; };
+		2AE2EA981E640BCB00F459A9 /* LJColumnChartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2EA971E640BCB00F459A9 /* LJColumnChartTests.m */; };
+		2AE2EAA31E640BCB00F459A9 /* LJColumnChartUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2EAA21E640BCB00F459A9 /* LJColumnChartUITests.m */; };
+		2AE2EABB1E64130200F459A9 /* LJInfoAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2EAB61E64130200F459A9 /* LJInfoAlert.m */; };
+		2AE2EABC1E64130200F459A9 /* LJSheetAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2EAB81E64130200F459A9 /* LJSheetAlertView.m */; };
+		2AE2EABD1E64130200F459A9 /* WKAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2EABA1E64130200F459A9 /* WKAlertView.m */; };
+		2AE2EAC11E64131300F459A9 /* TimeTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2EAC01E64131300F459A9 /* TimeTools.m */; };
+		2AE2EAC61E64132100F459A9 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2EAC41E64132100F459A9 /* EXTScope.m */; };
+		2AE2EAD31E6413C800F459A9 /* LJImageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2EAD01E6413C800F459A9 /* LJImageTools.m */; };
+		2AE2EAD41E6413C800F459A9 /* LJPHPhotoTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2EAD21E6413C800F459A9 /* LJPHPhotoTools.m */; };
+		2AE2EAE61E64143400F459A9 /* NSNotificationCenter+LJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2EADB1E64143400F459A9 /* NSNotificationCenter+LJ.m */; };
+		2AE2EAE71E64143400F459A9 /* NSTimer+LJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2EADD1E64143400F459A9 /* NSTimer+LJ.m */; };
+		2AE2EAE91E64143400F459A9 /* UIButton+LJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2EAE11E64143400F459A9 /* UIButton+LJ.m */; };
+		2AE2EAEA1E64143400F459A9 /* UIImage+LJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2EAE31E64143400F459A9 /* UIImage+LJ.m */; };
+		2AE2EAEB1E64143400F459A9 /* UIView+LJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2EAE51E64143400F459A9 /* UIView+LJ.m */; };
+		2AE2EAEF1E64180100F459A9 /* LJColumnChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2EAEE1E64180100F459A9 /* LJColumnChartView.m */; };
+		2AE2EAF31E64182B00F459A9 /* LJColumnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2EAF11E64182B00F459A9 /* LJColumnCell.m */; };
+		2AE2EAF41E64182B00F459A9 /* LJColumnCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AE2EAF21E64182B00F459A9 /* LJColumnCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2AE2EA941E640BCB00F459A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2AE2EA721E640BC800F459A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2AE2EA791E640BC900F459A9;
+			remoteInfo = LJColumnChart;
+		};
+		2AE2EA9F1E640BCB00F459A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2AE2EA721E640BC800F459A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2AE2EA791E640BC900F459A9;
+			remoteInfo = LJColumnChart;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2AE2EA7A1E640BC900F459A9 /* LJColumnChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LJColumnChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AE2EA7E1E640BC900F459A9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2AE2EA801E640BC900F459A9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2AE2EA811E640BC900F459A9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2AE2EA831E640BC900F459A9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2AE2EA841E640BC900F459A9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2AE2EA871E640BC900F459A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2AE2EA891E640BCA00F459A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2AE2EA8C1E640BCA00F459A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2AE2EA8E1E640BCA00F459A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AE2EA931E640BCB00F459A9 /* LJColumnChartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LJColumnChartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AE2EA971E640BCB00F459A9 /* LJColumnChartTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LJColumnChartTests.m; sourceTree = "<group>"; };
+		2AE2EA991E640BCB00F459A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AE2EA9E1E640BCB00F459A9 /* LJColumnChartUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LJColumnChartUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AE2EAA21E640BCB00F459A9 /* LJColumnChartUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LJColumnChartUITests.m; sourceTree = "<group>"; };
+		2AE2EAA41E640BCB00F459A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AE2EAB51E64130200F459A9 /* LJInfoAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJInfoAlert.h; sourceTree = "<group>"; };
+		2AE2EAB61E64130200F459A9 /* LJInfoAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJInfoAlert.m; sourceTree = "<group>"; };
+		2AE2EAB71E64130200F459A9 /* LJSheetAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJSheetAlertView.h; sourceTree = "<group>"; };
+		2AE2EAB81E64130200F459A9 /* LJSheetAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJSheetAlertView.m; sourceTree = "<group>"; };
+		2AE2EAB91E64130200F459A9 /* WKAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKAlertView.h; sourceTree = "<group>"; };
+		2AE2EABA1E64130200F459A9 /* WKAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKAlertView.m; sourceTree = "<group>"; };
+		2AE2EABF1E64131300F459A9 /* TimeTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeTools.h; sourceTree = "<group>"; };
+		2AE2EAC01E64131300F459A9 /* TimeTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeTools.m; sourceTree = "<group>"; };
+		2AE2EAC31E64132100F459A9 /* EXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTScope.h; sourceTree = "<group>"; };
+		2AE2EAC41E64132100F459A9 /* EXTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTScope.m; sourceTree = "<group>"; };
+		2AE2EAC51E64132100F459A9 /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
+		2AE2EACF1E6413C800F459A9 /* LJImageTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJImageTools.h; sourceTree = "<group>"; };
+		2AE2EAD01E6413C800F459A9 /* LJImageTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJImageTools.m; sourceTree = "<group>"; };
+		2AE2EAD11E6413C800F459A9 /* LJPHPhotoTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJPHPhotoTools.h; sourceTree = "<group>"; };
+		2AE2EAD21E6413C800F459A9 /* LJPHPhotoTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJPHPhotoTools.m; sourceTree = "<group>"; };
+		2AE2EAD51E6413F000F459A9 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		2AE2EAD61E6413F000F459A9 /* ConstString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstString.h; sourceTree = "<group>"; };
+		2AE2EAD71E6413F000F459A9 /* DebugAndRelease.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugAndRelease.h; sourceTree = "<group>"; };
+		2AE2EAD81E64140400F459A9 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		2AE2EADA1E64143400F459A9 /* NSNotificationCenter+LJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+LJ.h"; sourceTree = "<group>"; };
+		2AE2EADB1E64143400F459A9 /* NSNotificationCenter+LJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNotificationCenter+LJ.m"; sourceTree = "<group>"; };
+		2AE2EADC1E64143400F459A9 /* NSTimer+LJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+LJ.h"; sourceTree = "<group>"; };
+		2AE2EADD1E64143400F459A9 /* NSTimer+LJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+LJ.m"; sourceTree = "<group>"; };
+		2AE2EAE01E64143400F459A9 /* UIButton+LJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+LJ.h"; sourceTree = "<group>"; };
+		2AE2EAE11E64143400F459A9 /* UIButton+LJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+LJ.m"; sourceTree = "<group>"; };
+		2AE2EAE21E64143400F459A9 /* UIImage+LJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LJ.h"; sourceTree = "<group>"; };
+		2AE2EAE31E64143400F459A9 /* UIImage+LJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LJ.m"; sourceTree = "<group>"; };
+		2AE2EAE41E64143400F459A9 /* UIView+LJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LJ.h"; sourceTree = "<group>"; };
+		2AE2EAE51E64143400F459A9 /* UIView+LJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LJ.m"; sourceTree = "<group>"; };
+		2AE2EAED1E64180100F459A9 /* LJColumnChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJColumnChartView.h; sourceTree = "<group>"; };
+		2AE2EAEE1E64180100F459A9 /* LJColumnChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJColumnChartView.m; sourceTree = "<group>"; };
+		2AE2EAF01E64182B00F459A9 /* LJColumnCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJColumnCell.h; sourceTree = "<group>"; };
+		2AE2EAF11E64182B00F459A9 /* LJColumnCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJColumnCell.m; sourceTree = "<group>"; };
+		2AE2EAF21E64182B00F459A9 /* LJColumnCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJColumnCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2AE2EA771E640BC900F459A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AE2EA901E640BCB00F459A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AE2EA9B1E640BCB00F459A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2AE2EA711E640BC800F459A9 = {
+			isa = PBXGroup;
+			children = (
+				2AE2EA7C1E640BC900F459A9 /* LJColumnChart */,
+				2AE2EA961E640BCB00F459A9 /* LJColumnChartTests */,
+				2AE2EAA11E640BCB00F459A9 /* LJColumnChartUITests */,
+				2AE2EA7B1E640BC900F459A9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2AE2EA7B1E640BC900F459A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2AE2EA7A1E640BC900F459A9 /* LJColumnChart.app */,
+				2AE2EA931E640BCB00F459A9 /* LJColumnChartTests.xctest */,
+				2AE2EA9E1E640BCB00F459A9 /* LJColumnChartUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2AE2EA7C1E640BC900F459A9 /* LJColumnChart */ = {
+			isa = PBXGroup;
+			children = (
+				2AE2EAB31E64128B00F459A9 /* LJTools */,
+				2AE2EA801E640BC900F459A9 /* AppDelegate.h */,
+				2AE2EA811E640BC900F459A9 /* AppDelegate.m */,
+				2AE2EA831E640BC900F459A9 /* ViewController.h */,
+				2AE2EA841E640BC900F459A9 /* ViewController.m */,
+				2AE2EAEC1E64180100F459A9 /* LJColumnChart */,
+				2AE2EA861E640BC900F459A9 /* Main.storyboard */,
+				2AE2EA891E640BCA00F459A9 /* Assets.xcassets */,
+				2AE2EA8B1E640BCA00F459A9 /* LaunchScreen.storyboard */,
+				2AE2EA8E1E640BCA00F459A9 /* Info.plist */,
+				2AE2EA7D1E640BC900F459A9 /* Supporting Files */,
+			);
+			path = LJColumnChart;
+			sourceTree = "<group>";
+		};
+		2AE2EA7D1E640BC900F459A9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2AE2EA7E1E640BC900F459A9 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2AE2EA961E640BCB00F459A9 /* LJColumnChartTests */ = {
+			isa = PBXGroup;
+			children = (
+				2AE2EA971E640BCB00F459A9 /* LJColumnChartTests.m */,
+				2AE2EA991E640BCB00F459A9 /* Info.plist */,
+			);
+			path = LJColumnChartTests;
+			sourceTree = "<group>";
+		};
+		2AE2EAA11E640BCB00F459A9 /* LJColumnChartUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2AE2EAA21E640BCB00F459A9 /* LJColumnChartUITests.m */,
+				2AE2EAA41E640BCB00F459A9 /* Info.plist */,
+			);
+			path = LJColumnChartUITests;
+			sourceTree = "<group>";
+		};
+		2AE2EAB31E64128B00F459A9 /* LJTools */ = {
+			isa = PBXGroup;
+			children = (
+				2AE2EAD81E64140400F459A9 /* PrefixHeader.pch */,
+				2AE2EAD51E6413F000F459A9 /* Common.h */,
+				2AE2EAD61E6413F000F459A9 /* ConstString.h */,
+				2AE2EAD71E6413F000F459A9 /* DebugAndRelease.h */,
+				2AE2EAD91E64143400F459A9 /* Categorys */,
+				2AE2EACE1E6413C800F459A9 /* Image */,
+				2AE2EAC21E64132100F459A9 /* WeakSelf */,
+				2AE2EABE1E64131200F459A9 /* TimeTools */,
+				2AE2EAB41E64130200F459A9 /* PopView */,
+			);
+			path = LJTools;
+			sourceTree = "<group>";
+		};
+		2AE2EAB41E64130200F459A9 /* PopView */ = {
+			isa = PBXGroup;
+			children = (
+				2AE2EAB51E64130200F459A9 /* LJInfoAlert.h */,
+				2AE2EAB61E64130200F459A9 /* LJInfoAlert.m */,
+				2AE2EAB71E64130200F459A9 /* LJSheetAlertView.h */,
+				2AE2EAB81E64130200F459A9 /* LJSheetAlertView.m */,
+				2AE2EAB91E64130200F459A9 /* WKAlertView.h */,
+				2AE2EABA1E64130200F459A9 /* WKAlertView.m */,
+			);
+			path = PopView;
+			sourceTree = "<group>";
+		};
+		2AE2EABE1E64131200F459A9 /* TimeTools */ = {
+			isa = PBXGroup;
+			children = (
+				2AE2EABF1E64131300F459A9 /* TimeTools.h */,
+				2AE2EAC01E64131300F459A9 /* TimeTools.m */,
+			);
+			path = TimeTools;
+			sourceTree = "<group>";
+		};
+		2AE2EAC21E64132100F459A9 /* WeakSelf */ = {
+			isa = PBXGroup;
+			children = (
+				2AE2EAC31E64132100F459A9 /* EXTScope.h */,
+				2AE2EAC41E64132100F459A9 /* EXTScope.m */,
+				2AE2EAC51E64132100F459A9 /* metamacros.h */,
+			);
+			path = WeakSelf;
+			sourceTree = "<group>";
+		};
+		2AE2EACE1E6413C800F459A9 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				2AE2EACF1E6413C800F459A9 /* LJImageTools.h */,
+				2AE2EAD01E6413C800F459A9 /* LJImageTools.m */,
+				2AE2EAD11E6413C800F459A9 /* LJPHPhotoTools.h */,
+				2AE2EAD21E6413C800F459A9 /* LJPHPhotoTools.m */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		2AE2EAD91E64143400F459A9 /* Categorys */ = {
+			isa = PBXGroup;
+			children = (
+				2AE2EADA1E64143400F459A9 /* NSNotificationCenter+LJ.h */,
+				2AE2EADB1E64143400F459A9 /* NSNotificationCenter+LJ.m */,
+				2AE2EADC1E64143400F459A9 /* NSTimer+LJ.h */,
+				2AE2EADD1E64143400F459A9 /* NSTimer+LJ.m */,
+				2AE2EAE01E64143400F459A9 /* UIButton+LJ.h */,
+				2AE2EAE11E64143400F459A9 /* UIButton+LJ.m */,
+				2AE2EAE21E64143400F459A9 /* UIImage+LJ.h */,
+				2AE2EAE31E64143400F459A9 /* UIImage+LJ.m */,
+				2AE2EAE41E64143400F459A9 /* UIView+LJ.h */,
+				2AE2EAE51E64143400F459A9 /* UIView+LJ.m */,
+			);
+			path = Categorys;
+			sourceTree = "<group>";
+		};
+		2AE2EAEC1E64180100F459A9 /* LJColumnChart */ = {
+			isa = PBXGroup;
+			children = (
+				2AE2EAED1E64180100F459A9 /* LJColumnChartView.h */,
+				2AE2EAEE1E64180100F459A9 /* LJColumnChartView.m */,
+				2AE2EAF01E64182B00F459A9 /* LJColumnCell.h */,
+				2AE2EAF11E64182B00F459A9 /* LJColumnCell.m */,
+				2AE2EAF21E64182B00F459A9 /* LJColumnCell.xib */,
+			);
+			path = LJColumnChart;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2AE2EA791E640BC900F459A9 /* LJColumnChart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2AE2EAA71E640BCB00F459A9 /* Build configuration list for PBXNativeTarget "LJColumnChart" */;
+			buildPhases = (
+				2AE2EA761E640BC900F459A9 /* Sources */,
+				2AE2EA771E640BC900F459A9 /* Frameworks */,
+				2AE2EA781E640BC900F459A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LJColumnChart;
+			productName = LJColumnChart;
+			productReference = 2AE2EA7A1E640BC900F459A9 /* LJColumnChart.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2AE2EA921E640BCB00F459A9 /* LJColumnChartTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2AE2EAAA1E640BCB00F459A9 /* Build configuration list for PBXNativeTarget "LJColumnChartTests" */;
+			buildPhases = (
+				2AE2EA8F1E640BCB00F459A9 /* Sources */,
+				2AE2EA901E640BCB00F459A9 /* Frameworks */,
+				2AE2EA911E640BCB00F459A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2AE2EA951E640BCB00F459A9 /* PBXTargetDependency */,
+			);
+			name = LJColumnChartTests;
+			productName = LJColumnChartTests;
+			productReference = 2AE2EA931E640BCB00F459A9 /* LJColumnChartTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2AE2EA9D1E640BCB00F459A9 /* LJColumnChartUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2AE2EAAD1E640BCB00F459A9 /* Build configuration list for PBXNativeTarget "LJColumnChartUITests" */;
+			buildPhases = (
+				2AE2EA9A1E640BCB00F459A9 /* Sources */,
+				2AE2EA9B1E640BCB00F459A9 /* Frameworks */,
+				2AE2EA9C1E640BCB00F459A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2AE2EAA01E640BCB00F459A9 /* PBXTargetDependency */,
+			);
+			name = LJColumnChartUITests;
+			productName = LJColumnChartUITests;
+			productReference = 2AE2EA9E1E640BCB00F459A9 /* LJColumnChartUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2AE2EA721E640BC800F459A9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = LiJie;
+				TargetAttributes = {
+					2AE2EA791E640BC900F459A9 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = KKHXU36BGT;
+						ProvisioningStyle = Automatic;
+					};
+					2AE2EA921E640BCB00F459A9 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = KKHXU36BGT;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2AE2EA791E640BC900F459A9;
+					};
+					2AE2EA9D1E640BCB00F459A9 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = KKHXU36BGT;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2AE2EA791E640BC900F459A9;
+					};
+				};
+			};
+			buildConfigurationList = 2AE2EA751E640BC900F459A9 /* Build configuration list for PBXProject "LJColumnChart" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2AE2EA711E640BC800F459A9;
+			productRefGroup = 2AE2EA7B1E640BC900F459A9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2AE2EA791E640BC900F459A9 /* LJColumnChart */,
+				2AE2EA921E640BCB00F459A9 /* LJColumnChartTests */,
+				2AE2EA9D1E640BCB00F459A9 /* LJColumnChartUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2AE2EA781E640BC900F459A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AE2EA8D1E640BCA00F459A9 /* LaunchScreen.storyboard in Resources */,
+				2AE2EAF41E64182B00F459A9 /* LJColumnCell.xib in Resources */,
+				2AE2EA8A1E640BCA00F459A9 /* Assets.xcassets in Resources */,
+				2AE2EA881E640BC900F459A9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AE2EA911E640BCB00F459A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AE2EA9C1E640BCB00F459A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2AE2EA761E640BC900F459A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AE2EA851E640BC900F459A9 /* ViewController.m in Sources */,
+				2AE2EAEF1E64180100F459A9 /* LJColumnChartView.m in Sources */,
+				2AE2EA821E640BC900F459A9 /* AppDelegate.m in Sources */,
+				2AE2EAE71E64143400F459A9 /* NSTimer+LJ.m in Sources */,
+				2AE2EAD41E6413C800F459A9 /* LJPHPhotoTools.m in Sources */,
+				2AE2EA7F1E640BC900F459A9 /* main.m in Sources */,
+				2AE2EAC61E64132100F459A9 /* EXTScope.m in Sources */,
+				2AE2EAEB1E64143400F459A9 /* UIView+LJ.m in Sources */,
+				2AE2EABC1E64130200F459A9 /* LJSheetAlertView.m in Sources */,
+				2AE2EAF31E64182B00F459A9 /* LJColumnCell.m in Sources */,
+				2AE2EABD1E64130200F459A9 /* WKAlertView.m in Sources */,
+				2AE2EAEA1E64143400F459A9 /* UIImage+LJ.m in Sources */,
+				2AE2EAC11E64131300F459A9 /* TimeTools.m in Sources */,
+				2AE2EABB1E64130200F459A9 /* LJInfoAlert.m in Sources */,
+				2AE2EAE61E64143400F459A9 /* NSNotificationCenter+LJ.m in Sources */,
+				2AE2EAE91E64143400F459A9 /* UIButton+LJ.m in Sources */,
+				2AE2EAD31E6413C800F459A9 /* LJImageTools.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AE2EA8F1E640BCB00F459A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AE2EA981E640BCB00F459A9 /* LJColumnChartTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AE2EA9A1E640BCB00F459A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AE2EAA31E640BCB00F459A9 /* LJColumnChartUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2AE2EA951E640BCB00F459A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2AE2EA791E640BC900F459A9 /* LJColumnChart */;
+			targetProxy = 2AE2EA941E640BCB00F459A9 /* PBXContainerItemProxy */;
+		};
+		2AE2EAA01E640BCB00F459A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2AE2EA791E640BC900F459A9 /* LJColumnChart */;
+			targetProxy = 2AE2EA9F1E640BCB00F459A9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2AE2EA861E640BC900F459A9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2AE2EA871E640BC900F459A9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2AE2EA8B1E640BCA00F459A9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2AE2EA8C1E640BCA00F459A9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2AE2EAA51E640BCB00F459A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2AE2EAA61E640BCB00F459A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2AE2EAA81E640BCB00F459A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KKHXU36BGT;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/renjinkui/Desktop/LJColumnChart/LJColumnChart/LJTools/PrefixHeader.pch;
+				INFOPLIST_FILE = LJColumnChart/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LJ.LJColumnChart;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2AE2EAA91E640BCB00F459A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KKHXU36BGT;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/renjinkui/Desktop/LJColumnChart/LJColumnChart/LJTools/PrefixHeader.pch;
+				INFOPLIST_FILE = LJColumnChart/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LJ.LJColumnChart;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2AE2EAAB1E640BCB00F459A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = KKHXU36BGT;
+				INFOPLIST_FILE = LJColumnChartTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LJ.LJColumnChartTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LJColumnChart.app/LJColumnChart";
+			};
+			name = Debug;
+		};
+		2AE2EAAC1E640BCB00F459A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = KKHXU36BGT;
+				INFOPLIST_FILE = LJColumnChartTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LJ.LJColumnChartTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LJColumnChart.app/LJColumnChart";
+			};
+			name = Release;
+		};
+		2AE2EAAE1E640BCB00F459A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = KKHXU36BGT;
+				INFOPLIST_FILE = LJColumnChartUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LJ.LJColumnChartUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LJColumnChart;
+			};
+			name = Debug;
+		};
+		2AE2EAAF1E640BCB00F459A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = KKHXU36BGT;
+				INFOPLIST_FILE = LJColumnChartUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LJ.LJColumnChartUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LJColumnChart;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2AE2EA751E640BC900F459A9 /* Build configuration list for PBXProject "LJColumnChart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AE2EAA51E640BCB00F459A9 /* Debug */,
+				2AE2EAA61E640BCB00F459A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2AE2EAA71E640BCB00F459A9 /* Build configuration list for PBXNativeTarget "LJColumnChart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AE2EAA81E640BCB00F459A9 /* Debug */,
+				2AE2EAA91E640BCB00F459A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2AE2EAAA1E640BCB00F459A9 /* Build configuration list for PBXNativeTarget "LJColumnChartTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AE2EAAB1E640BCB00F459A9 /* Debug */,
+				2AE2EAAC1E640BCB00F459A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2AE2EAAD1E640BCB00F459A9 /* Build configuration list for PBXNativeTarget "LJColumnChartUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AE2EAAE1E640BCB00F459A9 /* Debug */,
+				2AE2EAAF1E640BCB00F459A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2AE2EA721E640BC800F459A9 /* Project object */;
+}
