@@ -581,7 +581,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KKHXU36BGT;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/renjinkui/Desktop/LJColumnChart/LJColumnChart/LJTools/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/renjinkui/Desktop/GitHub/LJColumnChart/LJColumnChart/LJTools/PrefixHeader.pch;
 				INFOPLIST_FILE = LJColumnChart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LJ.LJColumnChart;
@@ -595,7 +595,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KKHXU36BGT;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/renjinkui/Desktop/LJColumnChart/LJColumnChart/LJTools/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/renjinkui/Desktop/GitHub/LJColumnChart/LJColumnChart/LJTools/PrefixHeader.pch;
 				INFOPLIST_FILE = LJColumnChart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LJ.LJColumnChart;
@@ -672,6 +672,7 @@
 				2AE2EAA91E640BCB00F459A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2AE2EAAA1E640BCB00F459A9 /* Build configuration list for PBXNativeTarget "LJColumnChartTests" */ = {
 			isa = XCConfigurationList;
@@ -680,6 +681,7 @@
 				2AE2EAAC1E640BCB00F459A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2AE2EAAD1E640BCB00F459A9 /* Build configuration list for PBXNativeTarget "LJColumnChartUITests" */ = {
 			isa = XCConfigurationList;
@@ -688,6 +690,7 @@
 				2AE2EAAF1E640BCB00F459A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

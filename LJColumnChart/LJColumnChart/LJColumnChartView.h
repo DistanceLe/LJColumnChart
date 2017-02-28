@@ -11,19 +11,19 @@
 @interface LJColumnChartView : UIView
 
 /**  每跳柱形图的值 */
-@property(nonatomic, strong)NSArray* valueArray;
+@property(nonatomic, strong)NSArray<NSNumber*>* valueArray;
 
 /**  y轴的最大值， 可以不填，自动算出。 */
 @property(nonatomic, assign)NSInteger yAxisMax;
 
 /**  X轴的文字 */
-@property(nonatomic, strong)NSArray* XAxisTextsArray;
+@property(nonatomic, strong)NSArray<NSString*>* XAxisTextsArray;
 
 /**  每条柱形图的宽度，可以不设置，直接设置 columnWidth*/
-@property(nonatomic, strong)NSArray* columnWidthsArray;
+@property(nonatomic, strong)NSArray<NSNumber*>* columnWidthsArray;
 
 /**  每条柱形图的颜色，可以不设置，直接设置 columnColor*/
-@property(nonatomic, strong)NSArray* columnColorsArray;
+@property(nonatomic, strong)NSArray<UIColor*>* columnColorsArray;
 
 
 
@@ -54,7 +54,7 @@
 /**  显示的时候 是否有动画  默认有 */
 @property(nonatomic, assign)BOOL animation;
 
-/**  添加数据的时候，直接移到最末尾 */
+/**  添加数据的时候，默认直接移到最末尾 */
 @property(nonatomic, assign)BOOL scrollToEnd;
 
 /**  是否显示 Y轴值的虚线 默认不显示*/
@@ -72,7 +72,6 @@
 
 /**  显示详细值的背景图片 */
 @property(nonatomic, strong)UIImage* detailBackImage;
-
 
 
 

@@ -31,7 +31,11 @@
     chartView.columnWidthsArray = @[@(23), @(45), @(47), @(20),@(62), @(30)];
     chartView.columnColorsArray = @[[UIColor redColor], [UIColor greenColor],[UIColor redColor], [UIColor greenColor],[UIColor redColor], [UIColor greenColor]];
     
+    chartView.showYAxisDash = YES;
+    chartView.showEndValue = YES;
     chartView.yAxisMax = 150;
+//    chartView.showXAxisLine = NO;
+//    chartView.showYAxisLine = NO;
 //    chartView.columnSpace = 0;
     
     chartView.XUnit = @"30分钟";

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#define kLineAnimationDuration 0.8
 @interface LJColumnCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UIView *columnView;

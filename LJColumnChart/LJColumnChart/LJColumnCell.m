@@ -30,7 +30,7 @@
     self.columnHeight.constant = 0;
     if (animation) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            [UIView animateWithDuration:0.8 animations:^{
+            [UIView animateWithDuration:kLineAnimationDuration animations:^{
                 self.columnHeight.constant = height;
                 [self layoutIfNeeded];
             }];

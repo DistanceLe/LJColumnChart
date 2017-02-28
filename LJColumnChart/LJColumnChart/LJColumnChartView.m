@@ -11,7 +11,7 @@
 
 #define P_M(x,y) CGPointMake(x, y)
 #define XORYLINEMAXSIZE CGSizeMake(CGFLOAT_MAX,30)
-#define kLineAnimationDuration 0.8
+
 
 @interface LJColumnChartView ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -42,6 +42,7 @@
         self.showXAxisLine = YES;
         self.showYAxisLine = YES;
         self.canShowDetail = YES;
+        self.scrollToEnd = YES;
         self.columnColor = [UIColor whiteColor];
         self.columnSelectColor = [UIColor lightGrayColor];
         self.yAxisdashColor = [[UIColor whiteColor]colorWithAlphaComponent:0.6];
@@ -136,7 +137,9 @@
     
     
     [self.collectionView reloadData];
-    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.valueArray.count-1 inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
+    if (self.scrollToEnd) {
+        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.valueArray.count-1 inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
+    }
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.6*NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         self.oldCount = 0;
     });
@@ -254,7 +257,7 @@
         [self.layer addSublayer:shapeLayer];
         [self.layersArray addObject:shapeLayer];
     }
-    
+    [self bringSubviewToFront:self.collectionView];
 }
 
 #pragma mark ==============代理方法：======================
@@ -276,10 +279,13 @@
         cell.columnView.backgroundColor = self.columnColor;
     }
     cell.backDetailView.hidden = YES;
+    cell.endValueLabel.hidden = !self.showEndValue;
+    cell.endValueLabel.textColor = cell.columnView.backgroundColor;
     
     if (self.currentSelectIndex == indexPath.item) {
         cell.columnView.backgroundColor = self.columnSelectColor;
         cell.backDetailView.hidden = NO;
+        cell.endValueLabel.hidden = YES;
     }
     
     cell.detailBackImageView.backgroundColor = [UIColor redColor];
@@ -287,6 +293,9 @@
     cell.columnDetailLabel.text = detail;
     cell.columnDetailLabel.textColor = self.XAndY_TextColor;
     
+    //设置EndValue
+    cell.endValueLabel.text = [NSString stringWithFormat:@"%@", self.valueArray[indexPath.item]];
+
     
     //设置高度 及 宽度
     BOOL cellAnimation = NO;
@@ -319,11 +328,13 @@
         }else{
             oldCell.columnView.backgroundColor = self.columnColor;
         }
+        oldCell.endValueLabel.hidden = !self.showEndValue;
     }
     if (self.currentSelectIndex != indexPath.item) {
         LJColumnCell* cell = (LJColumnCell*)[collectionView cellForItemAtIndexPath:indexPath];
         cell.columnView.backgroundColor = self.columnSelectColor;
         cell.backDetailView.hidden = NO;
+        cell.endValueLabel.hidden = YES;
         [self.collectionView bringSubviewToFront:cell];
         self.currentSelectIndex = indexPath.item;
     }else{

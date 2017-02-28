@@ -29,10 +29,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08        54" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3rP-OA-mJo">
-                        <rect key="frame" x="105.5" y="300" width="45.5" height="25"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="25" id="VUy-2u-uTV"/>
-                        </constraints>
+                        <rect key="frame" x="105.5" y="319" width="45.5" height="11"/>
                         <fontDescription key="fontDescription" type="system" pointSize="9"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -83,7 +80,7 @@
                 <constraint firstItem="UVj-9i-z7h" firstAttribute="top" secondItem="maU-gR-nTH" secondAttribute="bottom" constant="3" id="CF5-Wx-rYT"/>
                 <constraint firstItem="Zsk-2y-qlt" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="R8w-sf-xoK"/>
                 <constraint firstAttribute="bottom" secondItem="Zsk-2y-qlt" secondAttribute="bottom" constant="3" id="W9X-5F-g1J"/>
-                <constraint firstItem="UVj-9i-z7h" firstAttribute="top" secondItem="3rP-OA-mJo" secondAttribute="bottom" constant="8" id="aWZ-7B-PZB"/>
+                <constraint firstItem="UVj-9i-z7h" firstAttribute="top" secondItem="3rP-OA-mJo" secondAttribute="bottom" constant="3" id="aWZ-7B-PZB"/>
                 <constraint firstItem="3rP-OA-mJo" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="bzV-Vg-kXi"/>
                 <constraint firstItem="maU-gR-nTH" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="nc3-K9-lFW"/>
             </constraints>
