@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^DisplayColumnBlock)(NSInteger index, BOOL hasDisplay);
+
 @interface LJColumnChartView : UIView
 
 /**  每跳柱形图的值 */
@@ -15,6 +17,12 @@
 
 /**  y轴的最大值， 可以不填，自动算出。 */
 @property(nonatomic, assign)NSInteger yAxisMax;
+
+/**  当前选中的 位置 */
+@property(nonatomic, assign)NSInteger   currentSelectIndex;
+
+/**  移动到当前位置  位置为center 有动画*/
+@property(nonatomic, assign)NSInteger   scrollToIndex;
 
 /**  X轴的文字 */
 @property(nonatomic, strong)NSArray<NSString*>* XAxisTextsArray;
@@ -25,7 +33,8 @@
 /**  每条柱形图的颜色，可以不设置，直接设置 columnColor*/
 @property(nonatomic, strong)NSArray<UIColor*>* columnColorsArray;
 
-
+/**  左下方的 其实位置（26， 28） 28固定 */
+@property(nonatomic, assign)CGSize  chartOriginSize;
 
 /**  每条柱形图的 间隙， 默认5 */
 @property(nonatomic, assign)CGFloat columnSpace;
@@ -45,8 +54,10 @@
 @property(nonatomic, strong)UIColor* XAndY_TextColor;
 @property(nonatomic, strong)UIColor* XAndY_LineColor;
 
-/**  X轴单位 ： 10分钟 */
+/**  X轴单位 如： 10分钟 或 分钟 */
 @property(nonatomic, copy)NSString* XUnit;
+/**  比如上面的10 是会变的。 则传该数组， 上面就改为‘分钟’ */
+@property(nonatomic, copy)NSArray<NSString*>* XUnitsArray;
 /**  Y轴单位 */
 @property(nonatomic, copy)NSString* YUnit;
 
@@ -67,6 +78,9 @@
 @property(nonatomic, assign)BOOL showXAxisLine;
 @property(nonatomic, assign)BOOL showYAxisLine;
 
+/**  是否显示Y轴文字， 默认显示 */
+@property(nonatomic, assign)BOOL showYAxisText;
+
 /**  是否可点击，显示详细值 , 默认打开*/
 @property(nonatomic, assign)BOOL canShowDetail;
 
@@ -78,10 +92,14 @@
 /**  添加数据, 后面相应的 宽度和颜色 可选， 默认移动到最后面 再添加 */
 -(void)addData:(NSArray* )addDataArray titleArray:(NSArray*)titleArray widthArray:(NSArray*)widthArray colorArray:(NSArray*)colorArray animation:(BOOL)animation;
 
+/**  滚到到 哪一个柱形条 */
+-(void)scrollToIndex:(NSInteger)index position:(UICollectionViewScrollPosition)position animation:(BOOL)animation;
+
 /**  开始显示 图表 */
 -(void)showChart;
 
-
+/**  柱形图显示的回调， 有将要出现，和 已经出现 两种状态 */
+-(void)displayColumnCallBackHandler:(DisplayColumnBlock)handler;
 
 
 @end

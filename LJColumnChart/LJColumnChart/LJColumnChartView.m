@@ -17,15 +17,13 @@
 
 @property(nonatomic, strong)UICollectionView* collectionView;
 
-@property(nonatomic, assign)CGSize      chartOriginSize;//左下方的 其实位置（26， 28）
-@property(nonatomic, assign)NSInteger   currentSelectIndex;//当前选中的 位置
 
 @property(nonatomic, assign)NSInteger   maxValue;//Y轴最大值
 @property(nonatomic, assign)CGFloat     perHeight;//每个单元的高度
 @property(nonatomic, assign)NSInteger   oldCount;//旧的数据 数量
 @property(nonatomic, assign)BOOL        newDataAnimation;//新的数据 是否要显示动画
 
-
+@property(nonatomic, strong)DisplayColumnBlock tempHandler;
 @property(nonatomic, strong)NSMutableArray* layersArray;
 
 @end
@@ -42,7 +40,9 @@
         self.showXAxisLine = YES;
         self.showYAxisLine = YES;
         self.canShowDetail = YES;
+        self.showYAxisText = YES;
         self.scrollToEnd = YES;
+        
         self.columnColor = [UIColor whiteColor];
         self.columnSelectColor = [UIColor lightGrayColor];
         self.yAxisdashColor = [[UIColor whiteColor]colorWithAlphaComponent:0.6];
@@ -57,15 +57,44 @@
     return self;
 }
 
+-(void)displayColumnCallBackHandler:(DisplayColumnBlock)handler{
+    self.tempHandler =handler;
+}
+
 -(void)showChart{
     [self drawChart];
-    
-    UICollectionViewFlowLayout* layout=[[UICollectionViewFlowLayout alloc]init];
-    layout.minimumLineSpacing=0;
-    layout.minimumInteritemSpacing=0;
-    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    self.collectionView.collectionViewLayout = layout;
+    self.collectionView.frame = CGRectMake(self.chartOriginSize.width,
+                                           5,
+                                           self.lj_width-self.chartOriginSize.width ,
+                                           self.lj_height-5);
     [self.collectionView reloadData];
+}
+
+-(void)setChartOriginSize:(CGSize)chartOriginSize{
+    chartOriginSize.height = 28;
+    _chartOriginSize = chartOriginSize;
+}
+
+-(void)setCurrentSelectIndex:(NSInteger)currentSelectIndex{
+    _currentSelectIndex = currentSelectIndex;
+    if (self.collectionView && _currentSelectIndex < self.valueArray.count) {
+        [self collectionView:self.collectionView didSelectItemAtIndexPath:[NSIndexPath indexPathForItem:_currentSelectIndex inSection:0]];
+    }else{
+        _currentSelectIndex = -1;
+    }
+}
+
+-(void)setScrollToIndex:(NSInteger)scrollToIndex{
+    if (scrollToIndex >=0 && scrollToIndex < self.valueArray.count) {
+        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:scrollToIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+    }
+    _scrollToIndex = scrollToIndex;
+}
+
+-(void)scrollToIndex:(NSInteger)index position:(UICollectionViewScrollPosition)position animation:(BOOL)animation{
+    if (index >=0 && index < self.valueArray.count) {
+        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0] atScrollPosition:position animated:animation];
+    }
 }
 
 -(void)setYAxisMax:(NSInteger)yAxisMax{
@@ -77,6 +106,7 @@
 }
 
 -(void)setValueArray:(NSArray *)valueArray{
+    _maxValue = 0;
     for (NSNumber* value in valueArray) {
         if (_maxValue < [value floatValue]) {
             _maxValue = [value floatValue];
@@ -91,6 +121,8 @@
     if (_yAxisMax > 0 && _yAxisMax > _maxValue) {
         _maxValue = _yAxisMax;
     }
+    
+    _maxValue *= 1.25;
     _perHeight = (self.lj_height - 30 - _chartOriginSize.height)/_maxValue;
     _valueArray = valueArray;
 }
@@ -194,46 +226,50 @@
         layer.path = bezier.CGPath;
         layer.strokeColor = _XAndY_LineColor.CGColor;
         
-//        if (self.animation) {
-//            CABasicAnimation *basic = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-//            basic.duration = self.showYAxisLine?kLineAnimationDuration:kLineAnimationDuration/2.0;
-//            basic.fromValue = @(0);
-//            basic.toValue = @(1);
-//            basic.autoreverses = NO;
-//            basic.fillMode = kCAFillModeForwards;
-//            [layer addAnimation:basic forKey:nil];
-//        }
+        //        if (self.animation) {
+        //            CABasicAnimation *basic = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+        //            basic.duration = self.showYAxisLine?kLineAnimationDuration:kLineAnimationDuration/2.0;
+        //            basic.fromValue = @(0);
+        //            basic.toValue = @(1);
+        //            basic.autoreverses = NO;
+        //            basic.fillMode = kCAFillModeForwards;
+        //            [layer addAnimation:basic forKey:nil];
+        //        }
         [self.layer addSublayer:layer];
     }
     
     //设置 Y轴文字
     UIBezierPath *second = [UIBezierPath bezierPath];
-    for (NSInteger i = 0; i<5; i++) {
-        NSInteger pace = (_maxValue) / 5;
-        CGFloat height = _perHeight * (i+1)*pace;
-        [second moveToPoint:P_M(_chartOriginSize.width, self.lj_height - self.chartOriginSize.height -height)];
-        [second addLineToPoint:P_M(self.lj_width, CGRectGetHeight(self.frame) - self.chartOriginSize.height - height)];
-        
-        CATextLayer *textLayer = [CATextLayer layer];
-        
-        textLayer.contentsScale = [UIScreen mainScreen].scale;
-        NSString *text =[NSString stringWithFormat:@"%ld",(i + 1) * pace];
-        
-        CGFloat be = [self sizeOfStringWithMaxSize:XORYLINEMAXSIZE textFont:8 aimString:text].width;
-        textLayer.frame = CGRectMake(_chartOriginSize.width - be - 3, CGRectGetHeight(self.frame) - self.chartOriginSize.height -height - 5, be, 15);
-        
-        UIFont *font = [UIFont systemFontOfSize:8];
-        CFStringRef fontName = (__bridge CFStringRef)font.fontName;
-        CGFontRef fontRef = CGFontCreateWithFontName(fontName);
-        textLayer.font = fontRef;
-        textLayer.fontSize = font.pointSize;
-        CGFontRelease(fontRef);
-        
-        textLayer.string = text;
-        
-        textLayer.foregroundColor = _XAndY_TextColor.CGColor;
-        [self.layer addSublayer:textLayer];
-        [self.layersArray addObject:textLayer];
+    if (self.showYAxisText || self.showYAxisDash) {
+        for (NSInteger i = 0; i<5; i++) {
+            NSInteger pace = (_maxValue) / 5;
+            CGFloat height = _perHeight * (i+1)*pace;
+            [second moveToPoint:P_M(_chartOriginSize.width, self.lj_height - self.chartOriginSize.height -height)];
+            [second addLineToPoint:P_M(self.lj_width, CGRectGetHeight(self.frame) - self.chartOriginSize.height - height)];
+            
+            if (self.showYAxisText) {
+                CATextLayer *textLayer = [CATextLayer layer];
+                
+                textLayer.contentsScale = [UIScreen mainScreen].scale;
+                NSString *text =[NSString stringWithFormat:@"%ld",(i + 1) * pace];
+                
+                CGFloat be = [self sizeOfStringWithMaxSize:XORYLINEMAXSIZE textFont:8 aimString:text].width;
+                textLayer.frame = CGRectMake(_chartOriginSize.width - be - 3, CGRectGetHeight(self.frame) - self.chartOriginSize.height -height - 5, be, 15);
+                
+                UIFont *font = [UIFont systemFontOfSize:8];
+                CFStringRef fontName = (__bridge CFStringRef)font.fontName;
+                CGFontRef fontRef = CGFontCreateWithFontName(fontName);
+                textLayer.font = fontRef;
+                textLayer.fontSize = font.pointSize;
+                CGFontRelease(fontRef);
+                
+                textLayer.string = text;
+                
+                textLayer.foregroundColor = _XAndY_TextColor.CGColor;
+                [self.layer addSublayer:textLayer];
+                [self.layersArray addObject:textLayer];
+            }
+        }
     }
     
     //画虚线
@@ -244,15 +280,15 @@
         shapeLayer.lineWidth = 0.5;
         [shapeLayer setLineDashPattern:@[@(3),@(3)]];
         
-        if (_animation) {
-            CABasicAnimation *basic2 = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-            basic2.duration = kLineAnimationDuration;
-            basic2.fromValue = @(0);
-            basic2.toValue = @(1);
-            basic2.autoreverses = NO;
-            basic2.fillMode = kCAFillModeForwards;
-            [shapeLayer addAnimation:basic2 forKey:nil];
-        }
+        //        if (_animation) {
+        //            CABasicAnimation *basic2 = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+        //            basic2.duration = kLineAnimationDuration;
+        //            basic2.fromValue = @(0);
+        //            basic2.toValue = @(1);
+        //            basic2.autoreverses = NO;
+        //            basic2.fillMode = kCAFillModeForwards;
+        //            [shapeLayer addAnimation:basic2 forKey:nil];
+        //        }
         
         [self.layer addSublayer:shapeLayer];
         [self.layersArray addObject:shapeLayer];
@@ -290,12 +326,15 @@
     
     cell.detailBackImageView.backgroundColor = [UIColor redColor];
     NSString* detail = [NSString stringWithFormat:@"%@%@\n%@", self.valueArray[indexPath.item], self.YUnit , self.XUnit];
+    if (self.XUnitsArray.count>indexPath.item) {
+        detail = [NSString stringWithFormat:@"%@%@\n%@%@", self.valueArray[indexPath.item], self.YUnit , self.XUnitsArray[indexPath.item], self.XUnit];
+    }
     cell.columnDetailLabel.text = detail;
     cell.columnDetailLabel.textColor = self.XAndY_TextColor;
     
     //设置EndValue
     cell.endValueLabel.text = [NSString stringWithFormat:@"%@", self.valueArray[indexPath.item]];
-
+    
     
     //设置高度 及 宽度
     BOOL cellAnimation = NO;
@@ -320,7 +359,7 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    if (self.currentSelectIndex >= 0) {
+    if (_currentSelectIndex >= 0) {
         LJColumnCell* oldCell = (LJColumnCell*)[collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:self.currentSelectIndex inSection:0]];
         oldCell.backDetailView.hidden = YES;
         if (self.columnColorsArray.count == self.valueArray.count) {
@@ -330,15 +369,28 @@
         }
         oldCell.endValueLabel.hidden = !self.showEndValue;
     }
-    if (self.currentSelectIndex != indexPath.item) {
+    if (_currentSelectIndex != indexPath.item) {
         LJColumnCell* cell = (LJColumnCell*)[collectionView cellForItemAtIndexPath:indexPath];
         cell.columnView.backgroundColor = self.columnSelectColor;
         cell.backDetailView.hidden = NO;
         cell.endValueLabel.hidden = YES;
         [self.collectionView bringSubviewToFront:cell];
-        self.currentSelectIndex = indexPath.item;
+        _currentSelectIndex = indexPath.item;
     }else{
-        self.currentSelectIndex = -1;
+        _currentSelectIndex = -1;
+    }
+}
+
+-(void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (self.tempHandler) {
+        self.tempHandler(indexPath.item, NO);
+    }
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath{
+    if (self.tempHandler) {
+        self.tempHandler(indexPath.item, YES);
     }
 }
 
@@ -354,6 +406,8 @@
     width += self.columnSpace;
     return CGSizeMake(width, self.lj_height-5);
 }
+
+
 
 -(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
     if (self.currentSelectIndex >= 0) {
