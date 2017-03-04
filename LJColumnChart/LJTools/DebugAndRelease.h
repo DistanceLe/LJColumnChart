@@ -9,14 +9,6 @@
 #ifndef DebugAndRelease_h
 #define DebugAndRelease_h
 
-#define Test
-#ifdef Test
-
-#else
-
-#endif
-
-
 
 
 #ifdef DEBUG

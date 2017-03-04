@@ -11,7 +11,7 @@
 #import "TimeTools.h"
 #import "LJSheetAlertView.h"
 
-#import "WKAlertView.h"
+#import "LJAlertView.h"
 #import <objc/runtime.h>
 
 #define AppDelegateInstance	 ([UIApplication sharedApplication].delegate)
@@ -69,7 +69,7 @@
 #pragma mark - ================ HPPhote 获取图片（相册） ==================
 +(void)getAllGroup:(PHGroupBlock)handler{
     if (![self isHadAuthorization]) {
-        [WKAlertView customAlertWithTitle:@"你没有打开相册权限哦" message:@"是否去设置" delegate:nil cancelButtonTitle:@"不去" otherButtonTitles:@"设置" clickButton:^(NSInteger flag) {
+        [LJAlertView customAlertWithTitle:@"你没有打开相册权限哦" message:@"是否去设置" delegate:nil cancelButtonTitle:@"不去" otherButtonTitles:@"设置" clickButton:^(NSInteger flag) {
             if (flag==1) {
                 NSURL* url=[NSURL URLWithString:UIApplicationOpenSettingsURLString];
                 [[UIApplication sharedApplication]openURL:url];
@@ -125,7 +125,7 @@
 
 +(void)getRollAlbum:(PHGroupBlock)handler{
     if (![self isHadAuthorization]) {
-        [WKAlertView customAlertWithTitle:@"你没有打开相册权限哦" message:@"是否去设置" delegate:nil cancelButtonTitle:@"不去" otherButtonTitles:@"设置" clickButton:^(NSInteger flag) {
+        [LJAlertView customAlertWithTitle:@"你没有打开相册权限哦" message:@"是否去设置" delegate:nil cancelButtonTitle:@"不去" otherButtonTitles:@"设置" clickButton:^(NSInteger flag) {
             if (flag==1) {
                 NSURL* url=[NSURL URLWithString:UIApplicationOpenSettingsURLString];
                 [[UIApplication sharedApplication]openURL:url];

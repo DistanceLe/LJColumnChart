@@ -17,9 +17,8 @@
 		2AE2EAA31E640BCB00F459A9 /* LJColumnChartUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2EAA21E640BCB00F459A9 /* LJColumnChartUITests.m */; };
 		2AE2EABB1E64130200F459A9 /* LJInfoAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2EAB61E64130200F459A9 /* LJInfoAlert.m */; };
 		2AE2EABC1E64130200F459A9 /* LJSheetAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2EAB81E64130200F459A9 /* LJSheetAlertView.m */; };
-		2AE2EABD1E64130200F459A9 /* WKAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2EABA1E64130200F459A9 /* WKAlertView.m */; };
+		2AE2EABD1E64130200F459A9 /* LJAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2EABA1E64130200F459A9 /* LJAlertView.m */; };
 		2AE2EAC11E64131300F459A9 /* TimeTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2EAC01E64131300F459A9 /* TimeTools.m */; };
-		2AE2EAC61E64132100F459A9 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2EAC41E64132100F459A9 /* EXTScope.m */; };
 		2AE2EAD31E6413C800F459A9 /* LJImageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2EAD01E6413C800F459A9 /* LJImageTools.m */; };
 		2AE2EAD41E6413C800F459A9 /* LJPHPhotoTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2EAD21E6413C800F459A9 /* LJPHPhotoTools.m */; };
 		2AE2EAE61E64143400F459A9 /* NSNotificationCenter+LJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2EADB1E64143400F459A9 /* NSNotificationCenter+LJ.m */; };
@@ -70,13 +69,10 @@
 		2AE2EAB61E64130200F459A9 /* LJInfoAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJInfoAlert.m; sourceTree = "<group>"; };
 		2AE2EAB71E64130200F459A9 /* LJSheetAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJSheetAlertView.h; sourceTree = "<group>"; };
 		2AE2EAB81E64130200F459A9 /* LJSheetAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJSheetAlertView.m; sourceTree = "<group>"; };
-		2AE2EAB91E64130200F459A9 /* WKAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKAlertView.h; sourceTree = "<group>"; };
-		2AE2EABA1E64130200F459A9 /* WKAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKAlertView.m; sourceTree = "<group>"; };
+		2AE2EAB91E64130200F459A9 /* LJAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJAlertView.h; sourceTree = "<group>"; };
+		2AE2EABA1E64130200F459A9 /* LJAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJAlertView.m; sourceTree = "<group>"; };
 		2AE2EABF1E64131300F459A9 /* TimeTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeTools.h; sourceTree = "<group>"; };
 		2AE2EAC01E64131300F459A9 /* TimeTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeTools.m; sourceTree = "<group>"; };
-		2AE2EAC31E64132100F459A9 /* EXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTScope.h; sourceTree = "<group>"; };
-		2AE2EAC41E64132100F459A9 /* EXTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTScope.m; sourceTree = "<group>"; };
-		2AE2EAC51E64132100F459A9 /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
 		2AE2EACF1E6413C800F459A9 /* LJImageTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJImageTools.h; sourceTree = "<group>"; };
 		2AE2EAD01E6413C800F459A9 /* LJImageTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJImageTools.m; sourceTree = "<group>"; };
 		2AE2EAD11E6413C800F459A9 /* LJPHPhotoTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJPHPhotoTools.h; sourceTree = "<group>"; };
@@ -200,7 +196,6 @@
 				2AE2EAD71E6413F000F459A9 /* DebugAndRelease.h */,
 				2AE2EAD91E64143400F459A9 /* Categorys */,
 				2AE2EACE1E6413C800F459A9 /* Image */,
-				2AE2EAC21E64132100F459A9 /* WeakSelf */,
 				2AE2EABE1E64131200F459A9 /* TimeTools */,
 				2AE2EAB41E64130200F459A9 /* PopView */,
 			);
@@ -214,8 +209,8 @@
 				2AE2EAB61E64130200F459A9 /* LJInfoAlert.m */,
 				2AE2EAB71E64130200F459A9 /* LJSheetAlertView.h */,
 				2AE2EAB81E64130200F459A9 /* LJSheetAlertView.m */,
-				2AE2EAB91E64130200F459A9 /* WKAlertView.h */,
-				2AE2EABA1E64130200F459A9 /* WKAlertView.m */,
+				2AE2EAB91E64130200F459A9 /* LJAlertView.h */,
+				2AE2EABA1E64130200F459A9 /* LJAlertView.m */,
 			);
 			path = PopView;
 			sourceTree = "<group>";
@@ -227,16 +222,6 @@
 				2AE2EAC01E64131300F459A9 /* TimeTools.m */,
 			);
 			path = TimeTools;
-			sourceTree = "<group>";
-		};
-		2AE2EAC21E64132100F459A9 /* WeakSelf */ = {
-			isa = PBXGroup;
-			children = (
-				2AE2EAC31E64132100F459A9 /* EXTScope.h */,
-				2AE2EAC41E64132100F459A9 /* EXTScope.m */,
-				2AE2EAC51E64132100F459A9 /* metamacros.h */,
-			);
-			path = WeakSelf;
 			sourceTree = "<group>";
 		};
 		2AE2EACE1E6413C800F459A9 /* Image */ = {
@@ -422,11 +407,10 @@
 				2AE2EAE71E64143400F459A9 /* NSTimer+LJ.m in Sources */,
 				2AE2EAD41E6413C800F459A9 /* LJPHPhotoTools.m in Sources */,
 				2AE2EA7F1E640BC900F459A9 /* main.m in Sources */,
-				2AE2EAC61E64132100F459A9 /* EXTScope.m in Sources */,
 				2AE2EAEB1E64143400F459A9 /* UIView+LJ.m in Sources */,
 				2AE2EABC1E64130200F459A9 /* LJSheetAlertView.m in Sources */,
 				2AE2EAF31E64182B00F459A9 /* LJColumnCell.m in Sources */,
-				2AE2EABD1E64130200F459A9 /* WKAlertView.m in Sources */,
+				2AE2EABD1E64130200F459A9 /* LJAlertView.m in Sources */,
 				2AE2EAEA1E64143400F459A9 /* UIImage+LJ.m in Sources */,
 				2AE2EAC11E64131300F459A9 /* TimeTools.m in Sources */,
 				2AE2EABB1E64130200F459A9 /* LJInfoAlert.m in Sources */,

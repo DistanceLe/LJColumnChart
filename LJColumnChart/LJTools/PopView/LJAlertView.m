@@ -1,26 +1,26 @@
 //
-//  WKAlertView.m
+//  LJAlertView.m
 //  7dmallStore
 //
 //  Created by celink on 15/6/30.
 //  Copyright (c) 2015年 celink. All rights reserved.
 //
 
-#import "WKAlertView.h"
+#import "LJAlertView.h"
 #import "AppDelegate.h"
 #import <objc/runtime.h>
 
 #define AppDelegateInstance	 ([UIApplication sharedApplication].delegate)
 
 
-@interface WKAlertView ()
+@interface LJAlertView ()
 
 @property(nonatomic, strong)CommitBlock tempBlock;
 @property(nonatomic, strong)UIAlertController* tempAlert;
 
 @end
 
-@implementation WKAlertView
+@implementation LJAlertView
 {
     __weak UIViewController* tempVC;
 }
@@ -29,7 +29,7 @@ static char alertKey;
 //自定义 弹出框：
 +(void)customAlertWithTitle:(NSString*)title message:(NSString *)message delegate:(id)delegate cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles clickButton:(CommitBlock)commit
 {
-    WKAlertView* tempSelf=[[WKAlertView alloc]initWithTitle:title message:message delegate:delegate cancelButtonTitle:cancelButtonTitle otherButtonTitles:otherButtonTitles andClick:commit];
+    LJAlertView* tempSelf=[[LJAlertView alloc]initWithTitle:title message:message delegate:delegate cancelButtonTitle:cancelButtonTitle otherButtonTitles:otherButtonTitles andClick:commit];
     [tempSelf show];
 }
 -(void)dealloc{

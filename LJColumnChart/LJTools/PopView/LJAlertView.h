@@ -1,5 +1,5 @@
 //
-//  WKAlertView.h
+//  LJAlertView.h
 //  7dmallStore
 //
 //  Created by celink on 15/6/30.
@@ -10,7 +10,7 @@
 
 typedef void(^CommitBlock)(NSInteger flag);
 
-@interface WKAlertView : UIView
+@interface LJAlertView : UIView
 
 /**  delegate 选择要 present 的ViewController */
 +(void)customAlertWithTitle:(NSString*)title
